@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-purple: #1D0B1B;
+    --secondary-purple: #da27c556;
+    --primary-gray: #DCE1E9;
+    --secondary-gray: #949DC7;
+    --highlight-green: #DBFF36;
+    --highlight-salmon: #F8938B;
+}
+
+html,body{ margin:0; padding:0; height:200%; width:100%;
+    background-color: var(--primary-purple);
+}
+
+
+
+
+.main-container{
+    height: 90vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.main-frame{
+    min-height: 100px;
+    min-width: 400px;
+
+    border-style: solid;
+    border-color: var(--primary-gray);
+    border-width: thin;
+
+    padding: 12px 18px;
+}
+
+h1,h2,h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+.main-frame h1 {
+    color:var(--highlight-salmon);
+    margin: 7px 0px;
+    font-size: calc(min(42px + 1.2vw, 70px));
+
+}
+
+.main-frame h2 {
+    color:var(--primary-gray);
+    margin: 0px 4px;
+    font-size: calc(min(26px + 1.2vw, 50px));
+    
+}
+
+.main-frame h3 {
+    color:var(--secondary-gray);
+    font-size: calc(min(18px + 1.2vw, 34px));
+}
+
+.main-frame .right{
+    margin-top: 35px;
+    text-align: right;
+}
+
+.social-links-desktop{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 15px 20px;
+
+    height: 350px;
+    justify-content: space-between;
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links i{
+    color: var(--primary-gray);
+}
+
+/*desktop*/
+@media (min-width: 800px) {
+    .social-links{
+        position: fixed;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        height:300px;
+        width: 40px;
+        
+    
+
+    }
+
+    .social-links i{
+        font-size: 50px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-links i:hover{
+        font-size: 60px;
+    }
+}
+
+/*mobile*/
+@media (max-width: 800px) {
+    .social-links{
+        width: 300px;
+    }
+
+    .social-links i{
+        font-size: 60px;
+    }
+
+    .main-container{
+        height: 85vh;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: var(--primary-purple);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-purple);
+    border-radius: 8px;
+  }
+  
